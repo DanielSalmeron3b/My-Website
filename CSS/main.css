@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600&display=swap');
+@keyframes text {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+    30%{
+        letter-spacing: 25px;
+    }
+
+    85%{
+        letter-spacing: 7px;
+    }
+}
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --main-aqua: #6BBAA7;
+    --sunflower: #FBA100;
+    --lavender-dark: #47425B;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Shippori Antique B1', sans-serif; */
+    font-family: 'Space Grotesk', sans-serif;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+header {
+    width: 100%;
+    height: 60px;
+}
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+header nav .nav-left-section{
+    justify-self: left;
+}
+header nav .nav-right-section{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.landing {
+    height: 100vh;
+    background-image: url('../assets/pexels-daniel-perez-sea.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset -1px 0px 0px 500px rgba(107,186,167,0.60);
+}
+
+.landing-text {
+    color: var(--white);
+    text-align: center;
+}
+.landing-text img {
+    width: 100px;
+    height: 100px;
+    /* border-radius: 100%; */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+}
+@keyframes morph {
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+.landing-text h1 {
+    transform: translate(0%,0%);
+    /* Here is where we use the text keyframe */
+    animation: text 3s 1;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.landing .landing-button{
+    background: none;
+    border: none;
+    color: var(--white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.2);
+    transition: 0.5s;
+    display: grid;
+    margin: 0 auto;
+}
+.landing .landing-button span{
+    display: block;
+    padding: 25px 60px;
+}
+.landing .landing-button:hover{
+    color: var(--black);
+    background: #ffffffa1;
+}
