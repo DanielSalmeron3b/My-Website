@@ -1,0 +1,52 @@
+@media (max-width: 1920px) {
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    header {
+        width: 100%;
+        height: 100px;
+    }
+    header nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li a{
+        color: var(--white);
+    }
+    
+    header nav ul li > a {
+        border-radius: 50px;
+        background: var(--background-btn);
+        letter-spacing: 1px;
+        box-shadow: var(--boxshadow-btn);
+        transition: 0.5s;
+        padding: 10px;
+    }
+    
+    header nav .nav-left-section{
+        justify-self: left;
+        gap: 20px;
+    }
+    header .nav-left-section img{
+        width: 40px;
+        margin: 40px;
+        margin:0;
+        padding: 0;
+    }
+    header nav .nav-right-section{
+        justify-self: right;
+        height: auto;
+        gap: 100px;
+        padding-right: 50px;
+    }
+    header nav .nav-right-section li:nth-child(4) {
+        width: 140px;
+    }
+}

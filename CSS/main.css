@@ -1,75 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+/* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600&display=swap');
-@keyframes text {
-    0% {
-        color: rgba(255, 255, 255, 0);
-    }
-    30%{
-        letter-spacing: 25px;
-    }
 
-    85%{
-        letter-spacing: 7px;
-    }
-}
-:root{
-    --white: #FFFFFF;
-    --black: #000000;
-    --main-aqua: #6BBAA7;
-    --sunflower: #FBA100;
-    --lavender-dark: #47425B;
-}
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* font-family: 'Shippori Antique B1', sans-serif; */
-    font-family: 'Space Grotesk', sans-serif;
-}
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-header {
-    width: 100%;
-    height: 60px;
-}
-header nav {
-    display: flex;
-    justify-content: flex-end;
-}
-header nav .nav-left-section{
-    justify-self: left;
-}
-header nav .nav-right-section{
-    width: 250px;
-    height: auto;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-}
-.landing {
-    height: 100vh;
-    background-image: url('../assets/pexels-daniel-perez-sea.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    box-shadow: inset -1px 0px 0px 500px rgba(107,186,167,0.60);
-}
-
-.landing-text {
-    color: var(--white);
-    text-align: center;
-}
-.landing-text img {
-    width: 100px;
-    height: 100px;
-    /* border-radius: 100%; */
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite;
-}
+/* Keyframes. For animations :) */
 @keyframes morph {
     0%{
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -81,33 +13,198 @@ header nav .nav-right-section{
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 }
+@keyframes text {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+    30%{
+        letter-spacing: 10px;
+    }
+    85%{
+        letter-spacing: 7px;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables */
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --main-aqua: #6BBAA7;
+    --sunflower: #FBA100;
+    --lavender-dark: #47425B;
+    --background-btn: rgba(0,0,0,0.25);
+    --boxshadow-btn: 10px 10px 15px -10px rgba(0,0,0,0.75);
+    --background-input: rgba(0,0,0,0.45);
+    --boxshadow-input: 10px 10px 15px -10px rgba(0,0,0,0.75);
+}
+html {
+    background-image: url('../assets/img/pexels-daniel-perez-sea.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    /* background-color: rgba(107,186,167,0.50); */
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--main-aqua);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #6d6d6d; 
+}
+
+.landing {
+    height: 100vh;
+}
+/* Hamburguer Menu */
+.hamburguer-button{
+    padding: 40px 40px;
+    position: relative;
+    z-index: 10;
+}
+.hamburguer-button img{
+    vertical-align: top;
+    width: 50px;
+    cursor: pointer;
+}
+nav{
+    position: fixed;
+    background-color: rgb(42, 42, 42);
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    z-index: 5;
+}
+nav ul{
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+nav ul li{
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+nav ul li a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Hamburguer Menu styles for JS */
+.active-menu{
+    transform: translate(-600px);
+}
+.opacity-menu{
+    background-color: rgba(0,0,0,0.50);
+    transition: all .5 ease;
+}
+
+.landing-text {
+    color: var(--white);
+    text-align: center;
+    margin-top: 150px;
+}
+.landing-text img {
+    width: 150px;
+    height: 150px;
+    /* border-radius: 100%; */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 6s ease-in-out infinite;
+}
 .landing-text h1 {
     transform: translate(0%,0%);
     /* Here is where we use the text keyframe */
     animation: text 3s 1;
     text-align: center;
     letter-spacing: 7px;
+    font-size: 22px;
+    margin: 6px 0 6px;
+}
+.landing-text a{
+    color: var(--white);
+}
+.landing-text p{
+    font-size: 16px;
+    margin: 0 auto 12px;
+    width: 80%;
 }
 
 .landing .landing-button{
-    background: none;
     border: none;
     color: var(--white);
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     border-radius: 50px;
     cursor: pointer;
-    background: rgba(0,0,0,0.2);
+    background: var(--background-btn);
     transition: 0.5s;
     display: grid;
     margin: 0 auto;
+    box-shadow: var(--boxshadow-btn);
 }
 .landing .landing-button span{
     display: block;
-    padding: 25px 60px;
+    padding: 20px 55px;
 }
-.landing .landing-button:hover{
+.landing .landing-button:hover, header nav ul li > a:hover{
     color: var(--black);
+    transform: scale(1.02);
     background: #ffffffa1;
+}
+
+/* Projects Section */
+.projects h2 {
+    font-size: 32px;
+    text-align: center;
+    color: var(--white);
+}
+/* Project Search Bar */
+.projects-search{
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    background: var(--background-input);
+    border-radius: 50px;
+    box-shadow: var(--boxshadow-input);
+}
+.projects-search-input{
+    padding: 8px 14px 8px;
+    background: none;
+    border: none;
+    /* outline: none; */
+    color: var(--white);
+}
+.projects-search input::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Project Search Icon (Magnifying Glass) */
+.projects-search-icon{
+    background-image: url('https://i2.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?fit=1200%2C1200&ssl=1&w=640');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    margin-left: 180px;
+    position: absolute;
+    border: 1px solid;
 }

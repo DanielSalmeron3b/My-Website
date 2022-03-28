@@ -6,30 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/main.css">
+    <!-- <link rel="stylesheet" href="CSS/media-queries.css"> -->
     <link rel="icon" href="/">
     <title>Salmeron</title>
 </head>
 
 <body>
+    <div class="hamburguer-button">
+        <img src="assets/img/menu-icon.png" alt="Hamburguer Button" id="hamburguer-menu">
+    </div>
     <div class="landing">
         <header>
-            <nav>
-            <ul class="nav-left-section">
-                <li><img src="/" alt="Logo"></li>
-            </ul>
-            <ul class="nav-right-section">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Contact</a></li>
-                <li><a href="/">About Me</a></li>
-            </ul>
-        </nav>
+            <nav class="active-menu" id="menu">
+                <ul class="nav-left-section">
+                    <!-- <li><a href=""><img src="./assets/img/logo.png" alt="Logo"></a></li> -->
+                    <li><a href="/">EN</a></li>
+                    <li><a href="/">ES</a></li>
+                </ul>
+                <ul class="nav-right-section">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">About Me</a></li>
+                </ul>
+            </nav>
         </header>
 
         <div class="landing-text">
-            <img src="./assets/dogwifhat.jpg" alt="A photo of Salmeron itself">
+            <img src="./assets/img/dogwifhat.jpg" alt="A photo of Salmeron itself">
             <h1>Hi, I'm Salmeron!</h1>
-        <p>I'm a frontend dev, I've worked in several professional both projects and personal projects</p>
-        <p>Find me on GitHub</p>
+        <p>I'm a software dev, I've worked in both professional and personal projects</p>
+        <p>Find me on <a href="https://github.com/DanielSalmeron3b" target="_blank">GitHub</a></p>
         </div>
         <button type="button" class="landing-button"><span>See projects</span></button>
     </div>
@@ -38,13 +45,13 @@
         <h2>These are my projects</h2>
         <div class="projects-search">
             <input type="text" placeholder="Search for a project" class="projects-search-input">
-        <a class="projects-search-icon" href="/"></a>
+            <span class="projects-search-icon"></span>
         </div>
         
     </section>
     <section class="about">
         <h2>About Me</h2>
-        <p>I'm a frontend dev, I worked in several professional both projects and personal projects</p>
+        <p>I'm a frontend dev, I've worked in both professional and personal projects</p>
     </section>
     <footer>
         <ul>
@@ -55,6 +62,7 @@
             <li><a href="/">Contact</a></li>
         </ul>
     </footer>
-</body>
 
+    <script src="JS/main.js"></script>
+</body>
 </html>
