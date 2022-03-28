@@ -2,44 +2,52 @@
 
 /* Keyframes. For animations :) */
 @keyframes morph {
-    0%{
+    0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
+
     50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
+
     100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 }
+
 @keyframes text {
     0% {
         color: rgba(255, 255, 255, 0);
     }
-    30%{
+
+    30% {
         letter-spacing: 10px;
     }
-    85%{
+
+    85% {
         letter-spacing: 7px;
     }
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Variables */
-:root{
+:root {
     --white: #FFFFFF;
     --black: #000000;
     --main-aqua: #6BBAA7;
     --sunflower: #FBA100;
     --lavender-dark: #47425B;
-    --background-btn: rgba(0,0,0,0.25);
-    --boxshadow-btn: 10px 10px 15px -10px rgba(0,0,0,0.75);
-    --background-input: rgba(0,0,0,0.45);
-    --boxshadow-input: 10px 10px 15px -10px rgba(0,0,0,0.75);
+    --background-btn: rgba(0, 0, 0, 0.25);
+    --boxshadow-btn: 10px 10px 15px -10px rgba(0, 0, 0, 0.75);
+    --background-input: rgba(0, 0, 0, 0.45);
+    --boxshadow-input: 10px 10px 15px -10px rgba(0, 0, 0, 0.75);
 }
+
 body {
     overflow-x: hidden;
     font-family: 'Space Grotesk', sans-serif;
@@ -50,38 +58,55 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-p, h1, h2, h3{
+
+p, h1, h2, h3 {
     color: var(--white);
 }
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 12px;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track, .carrousel::-webkit-scrollbar-track {
     background-color: var(--main-aqua);
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background: #6d6d6d; 
+    background: #6d6d6d;
 }
-
+.carrousel::-webkit-scrollbar-thumb{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.carrousel::-webkit-scrollbar {
+    width: 2px;
+}
+.carrousel::-webkit-scrollbar-track{
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
 .landing {
     height: 100vh;
 }
+
 /* Hamburguer Menu */
-.hamburguer-button{
+.hamburguer-button {
     padding: 40px 40px;
     position: relative;
     z-index: 10;
 }
-.hamburguer-button img{
+
+.hamburguer-button img {
     vertical-align: top;
     width: 50px;
     cursor: pointer;
 }
-nav{
+
+nav {
     position: fixed;
     background-color: rgb(42, 42, 42);
     width: 300px;
@@ -91,28 +116,32 @@ nav{
     transition: all .5s ease;
     z-index: 5;
 }
-nav ul{
+
+nav ul {
     padding: 100px 0px 20px 0px;
     list-style: none;
 }
-nav ul li{
+
+nav ul li {
     display: block;
     font-size: 25px;
     text-decoration: none;
     padding: 10px 50px;
     cursor: pointer;
 }
-nav ul li a{
+
+nav ul li a {
     color: var(--white);
     text-decoration: none;
 }
 
 /* Hamburguer Menu styles for JS */
-.active-menu{
+.active-menu {
     transform: translate(-600px);
 }
-.opacity-menu{
-    background-color: rgba(0,0,0,0.50);
+
+.opacity-menu {
+    background-color: rgba(0, 0, 0, 0.50);
     transition: all .5 ease;
 }
 
@@ -121,6 +150,7 @@ nav ul li a{
     text-align: center;
     margin-top: 150px;
 }
+
 .landing-text img {
     width: 150px;
     height: 150px;
@@ -128,8 +158,9 @@ nav ul li a{
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     animation: morph 6s ease-in-out infinite;
 }
+
 .landing-text h1 {
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
     /* Here is where we use the text keyframe */
     animation: text 3s 1;
     text-align: center;
@@ -137,16 +168,18 @@ nav ul li a{
     font-size: 22px;
     margin: 6px 0 6px;
 }
-.landing-text a{
+
+.landing-text a {
     color: var(--white);
 }
-.landing-text p{
+
+.landing-text p {
     font-size: 16px;
     margin: 0 auto 12px;
     width: 80%;
 }
 
-.landing .landing-button{
+.landing .landing-button {
     border: none;
     color: var(--white);
     font-family: 'Space Grotesk', sans-serif;
@@ -160,11 +193,13 @@ nav ul li a{
     margin: 0 auto;
     box-shadow: var(--boxshadow-btn);
 }
-.landing .landing-button span{
+
+.landing .landing-button span {
     display: block;
     padding: 20px 55px;
 }
-.landing .landing-button:hover, header nav ul li > a:hover{
+
+.landing .landing-button:hover, header nav ul li>a:hover {
     color: var(--black);
     transform: scale(1.02);
     background: #ffffffa1;
@@ -176,8 +211,9 @@ nav ul li a{
     text-align: center;
     padding-bottom: 12px;
 }
+
 /* Project Search Bar */
-.projects-search{
+.projects-search {
     display: flex;
     margin: 0 auto;
     width: 60%;
@@ -185,7 +221,8 @@ nav ul li a{
     border-radius: 50px;
     box-shadow: var(--boxshadow-input);
 }
-.projects-search-input{
+
+.projects-search-input {
     padding: 8px 14px 8px;
     background: none;
     border: none;
@@ -193,12 +230,13 @@ nav ul li a{
     /* outline: none; */
     color: var(--white);
 }
-.projects-search input::placeholder{
+
+.projects-search input::placeholder {
     font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Project Search Icon (Magnifying Glass) */
-.projects-search-icon{
+.projects-search-icon {
     background-image: url('https://i2.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?fit=1200%2C1200&ssl=1&w=640');
     background-repeat: no-repeat;
     background-position: center;
@@ -209,11 +247,109 @@ nav ul li a{
 }
 
 /* Projects slider */
-.project-slides{
+.project-slides {
     margin-top: 34px;
 }
-.project-slides-card-1{
+
+.project-slides-card-1 {
+    border-radius: 10px;
     border: 2px solid var(--white);
-    width: 90%;
+    width: 78%;
     margin: 0 auto;
+    padding: 8px;
+}
+
+.project-slides img {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+/* Carrousel Project */
+.flex-center {
+    overflow: hidden;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tools */
+
+
+/* Carrousel */
+
+.carrousel {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    /* min-width: 300px;
+    min-height: 300px; */
+    /* background-color: #001c40; */
+    border-radius: 10px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+
+
+.box {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    font-size: 8rem;
+    color: #001c40;
+}
+
+.gray {
+    background-color: #e8e8e8;
+}
+
+.pink {
+    background-color: #ff69eb;
+}
+
+.yellow {
+    background-color: #f7d002;
+}
+
+.violet {
+    background-color: #8338ec;
+}
+
+.green {
+    background-color: #018e42;
+}
+
+/* links */
+
+.link-box {
+    margin: 2rem auto;
+}
+
+.link-box>a {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #001c40;
+    color: white;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 3px solid transparent;
+    transition: color 0.1s ease-in-out;
+}
+
+.link-box>a:hover {
+    color: #f88070;
+}
+
+.link-box>a:active {
+    border: 3px solid #f88070;
 }
