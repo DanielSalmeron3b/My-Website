@@ -90,7 +90,7 @@ p, h1, h2, h3 {
     border-bottom-left-radius: 25px;
 }
 .landing {
-    height: 100vh;
+    height: 80vh;
 }
 
 /* Hamburguer Menu */
@@ -138,6 +138,7 @@ nav ul li a {
 /* Hamburguer Menu styles for JS */
 .active-menu {
     transform: translate(-600px);
+    box-shadow: 100px 0px 0px 0px rgba(0,0,0,0.75);
 }
 
 .opacity-menu {
@@ -167,6 +168,8 @@ nav ul li a {
     letter-spacing: 7px;
     font-size: 22px;
     margin: 6px 0 6px;
+    text-shadow: 4px 5px 8px var(--black);
+
 }
 
 .landing-text a {
@@ -181,7 +184,6 @@ nav ul li a {
 
 .landing .landing-button {
     border: none;
-    color: var(--white);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
     letter-spacing: 1px;
@@ -194,9 +196,14 @@ nav ul li a {
     box-shadow: var(--boxshadow-btn);
 }
 
-.landing .landing-button span {
+.landing .landing-button a {
     display: block;
     padding: 20px 55px;
+    text-decoration: none;
+    color: var(--white);
+}
+.landing .landing-button:focus a{
+    color: var(--black);
 }
 
 .landing .landing-button:hover, header nav ul li>a:hover {
@@ -237,119 +244,56 @@ nav ul li a {
 
 /* Project Search Icon (Magnifying Glass) */
 .projects-search-icon {
-    background-image: url('https://i2.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?fit=1200%2C1200&ssl=1&w=640');
+    background-image: url('https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/search-512.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     width: 26px;
     height: 26px;
     margin-top: 2px;
+    margin-left: 4px;
 }
 
 /* Projects slider */
 .project-slides {
-    margin-top: 34px;
+    margin: 34px 16px;
 }
 
-.project-slides-card-1 {
+.project-card-container {
     border-radius: 10px;
-    border: 2px solid var(--white);
-    width: 78%;
-    margin: 0 auto;
-    padding: 8px;
-}
-
-.project-slides img {
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    scroll-snap-align: center;
     width: 80%;
-    height: 80%;
+    min-width: 240px;
+    height: 480px;
     margin: 0 auto;
+    padding: 14px;
+    backdrop-filter: blur(2px) opacity(100%);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
 }
-
-/* Carrousel Project */
-.flex-center {
-    overflow: hidden;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.project-card-container h3{
+    text-align: center;
+    margin-bottom: 12px;
 }
-
-/* Tools */
-
-
-/* Carrousel */
-
-.carrousel {
+.project-card-container img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: auto;
+}
+.project-card-container p{
+    margin-top: 20px;
+}
+.project-container--slider{
     display: flex;
-    width: 80%;
-    height: 70%;
-    /* min-width: 300px;
-    min-height: 300px; */
-    /* background-color: #001c40; */
-    border-radius: 10px;
+    gap: 40px;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    height: 486px;
 }
 
-
-
-.box {
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    font-size: 8rem;
-    color: #001c40;
-}
-
-.gray {
-    background-color: #e8e8e8;
-}
-
-.pink {
-    background-color: #ff69eb;
-}
-
-.yellow {
-    background-color: #f7d002;
-}
-
-.violet {
-    background-color: #8338ec;
-}
-
-.green {
-    background-color: #018e42;
-}
-
-/* links */
-
-.link-box {
-    margin: 2rem auto;
-}
-
-.link-box>a {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: #001c40;
-    color: white;
-    margin: 0.5rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border: 3px solid transparent;
-    transition: color 0.1s ease-in-out;
-}
-
-.link-box>a:hover {
-    color: #f88070;
-}
-
-.link-box>a:active {
-    border: 3px solid #f88070;
+.project-container--slider::-webkit-scrollbar{
+    display: none;
 }

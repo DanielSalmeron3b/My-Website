@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-16">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/main.css">
@@ -34,14 +34,14 @@
 
         <div class="landing-text">
             <img src="./assets/img/dogwifhat.jpg" alt="A photo of Salmeron itself">
-            <h1>Hi, I'm Salmeron!</h1>
+            <h1>Hi,<br>I'm Salmeron!</h1>
             <p>I'm a software dev, I've worked in both professional and personal projects</p>
             <p>Find me on <a href="https://github.com/DanielSalmeron3b" target="_blank">GitHub</a></p>
         </div>
-        <button type="button" class="landing-button"><span>See projects</span></button>
+        <button type="button" class="landing-button"><a href="#projects-section">See projects</a></button>
     </div>
 
-    <section class="projects">
+    <section class="projects" id="projects-section">
         <h2>These are my projects</h2>
         <div class="projects-search">
             <span class="projects-search-icon"></span>
@@ -49,37 +49,41 @@
         </div>
 
         <article class="project-slides">
-            <div class="project-slides-card-1">
-                <h3>Salesianos Coffee Break</h3>
-                <img src="assets/img/SCB-Project.png" alt="Salesianos Coffee Break">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque minima officia magnam quos rem
-                    commodi numquam nobis voluptatibus sapiente deleniti.</p>
+
+            <div class="project-container--slider">
+
+                <div class="project-slides-card-1 project-card-container">
+                    <h3>☕ Salesianos Coffee Break</h3>
+                        <img src="assets/img/SCB-Project.png" alt="Salesianos Coffee Break">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque minima officia magnam quos rem
+                        commodi numquam nobis voluptatibus sapiente deleniti.</p>
+                    <button type="button" class="landing-button"><a href="#projects-section">See projects</a></button>
+                </div>
+
+                <div class="project-slides-card-2 project-card-container">
+                    <h3>Google clone</h3>
+                    <img src="assets/img/SCB-Project.png" alt="Salesianos Coffee Break">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque minima officia magnam quos rem
+                        commodi numquam nobis voluptatibus sapiente deleniti.</p>
+                </div>
+
+                <div class="project-slides-card-3 project-card-container">
+                    <h3>Platzi</h3>
+                    <img src="assets/img/SCB-Project.png" alt="Salesianos Coffee Break">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque minima officia magnam quos rem
+                        commodi numquam nobis voluptatibus sapiente deleniti.</p>
+                </div>
+
             </div>
+
         </article>
-
-        <!-- Carrousel Project -->
-        <div class="flex-center">
-            <div class="carrousel box-shadow">
-                <div id="1" class="box gray flex-center">1</div>
-                <div id="2" class="box pink flex-center">2</div>
-                <div id="3" class="box green flex-center">3</div>
-                <div id="4" class="box yellow flex-center">4</div>
-                <div id="5" class="box violet flex-center">5</div>
-            </div>
-            <div class="link-box flex-center">
-                <a href="#1" class="flex-center box-shadow">1</a>
-                <a href="#2" class="flex-center box-shadow">2</a>
-                <a href="#3" class="flex-center box-shadow">3</a>
-                <a href="#4" class="flex-center box-shadow">4</a>
-                <a href="#5" class="flex-center box-shadow">5</a>
-            </div>
-        </div>
-
     </section>
+
     <section class="about">
         <h2>About Me</h2>
         <p>I'm a frontend dev, I've worked in both professional and personal projects</p>
     </section>
+
     <footer>
         <ul>
             <li><a href="/">Home</a></li>
