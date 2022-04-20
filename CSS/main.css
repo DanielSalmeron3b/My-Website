@@ -41,7 +41,7 @@
     --black: #000000;
     --main-aqua: #6BBAA7;
     --sunflower: #FBA100;
-    --lavender-dark: #47425B;
+    --main-grey: #4B4A4E;
     --background-btn: rgba(0, 0, 0, 0.25);
     --boxshadow-btn: 10px 10px 15px -10px rgba(0, 0, 0, 0.75);
     --background-input: rgba(0, 0, 0, 0.45);
@@ -52,7 +52,7 @@ body {
     overflow-x: hidden;
     font-family: 'Space Grotesk', sans-serif;
     /* background-color: rgba(107,186,167,0.50); */
-    background-image: url('/assets/img/conchalio-beach-1.png');
+    background-image: url('/assets/backgrounds/bkg1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -182,7 +182,9 @@ nav ul li a {
     width: 80%;
 }
 
-.landing .landing-button {
+/* Landing button */
+.landing .landing-button, 
+.card-button {
     border: none;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
@@ -196,20 +198,29 @@ nav ul li a {
     box-shadow: var(--boxshadow-btn);
 }
 
-.landing .landing-button a {
+.landing .landing-button a, 
+.card-button a {
     display: block;
     padding: 20px 55px;
     text-decoration: none;
     color: var(--white);
 }
-.landing .landing-button:focus a{
+.landing .landing-button:focus a, 
+.card-button:focus a{
     color: var(--black);
 }
 
-.landing .landing-button:hover, header nav ul li>a:hover {
+.landing .landing-button:hover, 
+header nav ul li>a:hover, 
+.card-button:hover {
     color: var(--black);
     transform: scale(1.02);
     background: #ffffffa1;
+}
+
+/* Cards button */
+.card-button{
+    margin-top: 14px;
 }
 
 /* Projects Section */
@@ -265,7 +276,7 @@ nav ul li a {
     position: relative;
     scroll-snap-align: center;
     width: 80%;
-    min-width: 240px;
+    min-width: 260px;
     height: 480px;
     margin: 0 auto;
     padding: 14px;
@@ -296,4 +307,8 @@ nav ul li a {
 
 .project-container--slider::-webkit-scrollbar{
     display: none;
+}
+/* Footer */
+footer{
+    background: var(--main-grey);
 }
