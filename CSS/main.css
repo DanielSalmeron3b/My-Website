@@ -1,314 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600&display=swap');
-
-/* Keyframes. For animations :) */
-@keyframes morph {
-    0% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-
-    50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-
-    100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
+:root{
+    --off-white: #fcf4e6;
+    --off-black: #2d2e27;
 }
-
-@keyframes text {
-    0% {
-        color: rgba(255, 255, 255, 0);
-    }
-
-    30% {
-        letter-spacing: 10px;
-    }
-
-    85% {
-        letter-spacing: 7px;
-    }
-}
-
-* {
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-/* Variables */
-:root {
-    --white: #FFFFFF;
-    --black: #000000;
-    --main-aqua: #6BBAA7;
-    --sunflower: #FBA100;
-    --main-grey: #4B4A4E;
-    --background-btn: rgba(0, 0, 0, 0.25);
-    --boxshadow-btn: 10px 10px 15px -10px rgba(0, 0, 0, 0.75);
-    --background-input: rgba(0, 0, 0, 0.45);
-    --boxshadow-input: 10px 10px 15px -10px rgba(0, 0, 0, 0.75);
-}
-
-body {
-    overflow-x: hidden;
-    font-family: 'Space Grotesk', sans-serif;
-    /* background-color: rgba(107,186,167,0.50); */
-    background-image: url('/assets/backgrounds/bkg1.jpg');
+body{
+    background-image: url('../assets/backgrounds/bk-semicircles-pattern.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    color: var(--off-black);
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
 }
 
-p, h1, h2, h3 {
-    color: var(--white);
+header .window-nav{
+    width: 100%;
+    border-radius: 0;
+}
+header nav img{
+    height: 30px;
+    width: 30px;
+}
+.window{
+    width: 75%;
+    background: var(--off-white);
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: 2px 2px 0px 5px rgba(45,46,39,1);
+}
+.main-window--header{
+    margin-top: 28px;
+    height: 40px;
+    padding: 4px 8px;
+    display: table;
+}
+.main-window--header h1{
+    display: table-cell;
+    vertical-align: middle;
+}
+.window-body--header{
+    height: 22px;
 }
 
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 12px;
+/* Window icons */
+.main-window--body .window-body--header, 
+.project-window--body .window-body--header{
+    display: flex;
+    justify-content: flex-end;
+}
+.window--body .window-body--header{
+    display: flex;
+    justify-content: space-between;
+}
+.window--icons img{
+    height: 14px;
+    width: 14px;
+    margin: 4px 4px 0 0;
 }
 
-::-webkit-scrollbar-track, .carrousel::-webkit-scrollbar-track {
-    background-color: var(--main-aqua);
-}
-
-::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background: #6d6d6d;
-}
-.carrousel::-webkit-scrollbar-thumb{
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-.carrousel::-webkit-scrollbar {
-    width: 2px;
-}
-.carrousel::-webkit-scrollbar-track{
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-.landing {
-    height: 80vh;
-}
-
-/* Hamburguer Menu */
-.hamburguer-button {
-    padding: 40px 40px;
-    position: relative;
-    z-index: 10;
-}
-
-.hamburguer-button img {
-    vertical-align: top;
-    width: 50px;
-    cursor: pointer;
-}
-
-nav {
-    position: fixed;
-    background-color: rgb(42, 42, 42);
-    width: 300px;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transition: all .5s ease;
-    z-index: 5;
-}
-
-nav ul {
-    padding: 100px 0px 20px 0px;
-    list-style: none;
-}
-
-nav ul li {
-    display: block;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 10px 50px;
-    cursor: pointer;
-}
-
-nav ul li a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-/* Hamburguer Menu styles for JS */
-.active-menu {
-    transform: translate(-600px);
-    box-shadow: 100px 0px 0px 0px rgba(0,0,0,0.75);
-}
-
-.opacity-menu {
-    background-color: rgba(0, 0, 0, 0.50);
-    transition: all .5 ease;
-}
-
-/* Landing */
-.landing-text {
-    text-align: center;
-    margin-top: 150px;
-}
-
-.landing-text img {
-    width: 150px;
-    height: 150px;
-    /* border-radius: 100%; */
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 6s ease-in-out infinite;
-}
-
-.landing-text h1 {
-    transform: translate(0%, 0%);
-    /* Here is where we use the text keyframe */
-    animation: text 3s 1;
-    text-align: center;
-    letter-spacing: 7px;
-    font-size: 22px;
-    margin: 6px 0 6px;
-    text-shadow: 4px 5px 8px var(--black);
-
-}
-
-.landing-text a {
-    color: var(--white);
-}
-
-.landing-text p {
-    font-size: 16px;
-    margin: 0 auto 12px;
-    width: 80%;
-}
-
-/* Landing button */
-.landing .landing-button, 
-.card-button {
+/* Horizontal line */
+hr{
+    height: 3px;
+    background-color: var(--off-black);
+    color: var(--off-black);
     border: none;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    border-radius: 50px;
-    cursor: pointer;
-    background: var(--background-btn);
-    transition: 0.5s;
+}
+.window--body{
+    margin-top: 50px;
+}
+.main-window--body{
+    margin-top: 24px;
+}
+
+.window-body--content{
+    padding: 6%;
+}
+/* My photo */
+.main-photo{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Django logo */
+.second-window--body img{
+    height: 60px;
+    width: 140px;
+}
+
+/* PROJECTS PAGE */
+.projects-container{
     display: grid;
-    margin: 0 auto;
-    box-shadow: var(--boxshadow-btn);
-}
-
-.landing .landing-button a, 
-.card-button a {
-    display: block;
-    padding: 20px 55px;
-    text-decoration: none;
-    color: var(--white);
-}
-.landing .landing-button:focus a, 
-.card-button:focus a{
-    color: var(--black);
-}
-
-.landing .landing-button:hover, 
-header nav ul li>a:hover, 
-.card-button:hover {
-    color: var(--black);
-    transform: scale(1.02);
-    background: #ffffffa1;
-}
-
-/* Cards button */
-.card-button{
-    margin-top: 14px;
-}
-
-/* Projects Section */
-.projects h2 {
-    font-size: 32px;
-    text-align: center;
-    padding-bottom: 12px;
-}
-
-/* Project Search Bar */
-.projects-search {
-    display: flex;
-    margin: 0 auto;
-    width: 60%;
-    background: var(--background-input);
-    border-radius: 50px;
-    box-shadow: var(--boxshadow-input);
-}
-
-.projects-search-input {
-    padding: 8px 14px 8px;
-    background: none;
-    border: none;
-    outline: none;
-    /* outline: none; */
-    color: var(--white);
-}
-
-.projects-search input::placeholder {
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-/* Project Search Icon (Magnifying Glass) */
-.projects-search-icon {
-    background-image: url('https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/search-512.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 26px;
-    height: 26px;
-    margin-top: 2px;
-    margin-left: 4px;
-}
-
-/* Projects slider */
-.project-slides {
-    margin: 34px 16px;
-}
-
-.project-card-container {
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    position: relative;
-    scroll-snap-align: center;
-    width: 80%;
-    min-width: 260px;
-    height: 480px;
-    margin: 0 auto;
-    padding: 14px;
-    backdrop-filter: blur(2px) opacity(100%);
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-}
-.project-card-container h3{
-    text-align: center;
-    margin-bottom: 12px;
-}
-.project-card-container img {
-    width: 180px;
-    height: 180px;
-    display: block;
-    margin: auto;
-}
-.project-card-container p{
-    margin-top: 20px;
-}
-.project-container--slider{
-    display: flex;
-    gap: 40px;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-    height: 486px;
-}
-
-.project-container--slider::-webkit-scrollbar{
-    display: none;
-}
-/* Footer */
-footer{
-    background: var(--main-grey);
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            280px,
+            1fr
+        )
+    );
+    gap: 16px
 }
