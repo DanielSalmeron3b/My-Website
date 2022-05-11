@@ -1,4 +1,4 @@
-@media (max-width: 1920px) {
+/* @media (max-width: 1920px) {
     a {
         text-decoration: none;
         cursor: pointer;
@@ -48,5 +48,82 @@
     }
     header nav .nav-right-section li:nth-child(4) {
         width: 140px;
+    }
+} */
+
+@media screen and (max-width: 820px) {
+    footer section.horizontal-footer-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    footer section.horizontal-footer-section div {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    footer ul li {
+        display: block !important;
+        padding: 1em !important;
+        border-top: 1px solid #555555;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        font-size: 1.15rem !important;
+    }
+
+    footer ul li:first-child {
+        border-top: none;
+    }
+
+    footer a.footer-button {
+        display: block;
+        text-align: center;
+        max-width: 350px;
+        margin: 0.32rem auto;
+    }
+    /* id to class footer-top-section */
+    footer section.horizontal-footer-section.footer-top-section div {
+        margin-top: 0;
+        margin-bottom: 1.68rem;
+    }
+
+    /* id to class footer-buttons-container */
+    footer .footer-buttons-container {
+        margin-left: 0;
+    }
+    /* id to class "footer-top-menu" */
+    footer ul.footer-top-menu {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    footer .footer-top-menu-item-active::before {
+        display: none;
+    }
+
+    footer #footer-about {
+        margin-bottom: 3rem;
+    }
+
+    footer ul.footer-column-menu li {
+        margin-bottom: 0;
+        display: block;
+        text-align: center;
+    }
+    /* id to class footer-bottom-section */
+    footer section.footer-bottom-section div {
+        text-align: center;
+    }
+    /* id to class footer-bottom-section */
+    footer section.horizontal-footer-section.footer-bottom-section {
+        margin: 1.32rem 0;
+        padding: 0;
+        border-top: 0;
+    }
+    /* id to class footer-bottom-section */
+    /* id to class footer-social-buttons */
+    footer section.footer-bottom-section .footer-social-buttons {
+        margin-top: 1.32rem;
     }
 }

@@ -11,10 +11,13 @@
             </div>
         </div>
         <hr>
-        <div class="second-window window-body--content">
+        <div class="first-window window-body--content">
             <h2>Django Weather App ⛅</h2>
-            <img src="./assets/img/mint-Django-Logo.png" alt="Django">
-            <p>xd</p>
+            <img src="./assets/img/weather-django-purple.png" alt="Django">
+            <p>This is my first app using django 🥳. 
+                You just have to write the city of which you want 
+                to know its climate.</p>
+            <button>See code</button>
         </div>
 </article>
 
@@ -29,8 +32,9 @@
         <hr>
         <div class="second-window window-body--content">
             <h2>Salesianos Coffee Break ☕</h2>
-            <img src="./assets/img/mint-Django-Logo.png" alt="Django">
+            <img src="./assets/img/SCB-Project.png" alt="Django">
             <p>xd</p>
+            <button>See code</button>
         </div>
 </article>
 
@@ -43,10 +47,11 @@
             </div>
         </div>
         <hr>
-        <div class="second-window window-body--content">
+        <div class="third-window window-body--content">
             <h2>Google Clone 🔍</h2>
-            <img src="./assets/img/mint-Django-Logo.png" alt="Django">
+            <img src="./assets/img/google-clone-light.jpg" alt="Django">
             <p>xd</p>
+            <button>See code</button>
         </div>
 </article>
 
@@ -63,6 +68,7 @@
             <h2>Django Weather app</h2>
             <img src="./assets/img/mint-Django-Logo.png" alt="Django">
             <p>xd</p>
+            <button>See code</button>
         </div>
 </article>
 
