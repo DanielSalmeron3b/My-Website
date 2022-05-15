@@ -41,7 +41,7 @@
         <div class="second-window--backend">
             <div class="window-backend--django">
                 <h3>Django 🤠</h3>
-                <img src="./assets/img/mint-Django-Logo.png" alt="Django">
+                <img src="./assets/img/django-mint-logo.png" alt="Django">
             </div>
             <div class="window-backend--php">
                 <h3>PHP 🐘</h3>
@@ -92,38 +92,34 @@
         <div class="window-body--cards">
             <div class="body-card--github">
                 <div class="left-card--github">
-                    <h3>My-Website</h3>
-                    <p>This is my Website, where you can find
-                        everything about me and what I do 👨🏽‍💻</p>
+                    <h3 id="myWebsiteGitHubTitle"></h3>
+                    <p id="myWebsiteGitHubDesc"></p>
                 </div>
                 <div class="right-card--github">
-                    <p>⭐ 0</p>
-                    <p>🍴 0</p>
+                    <p id="myWebsiteGitHubStars"></p>
+                    <p id="myWebsiteGitHubForks"></p>
                 </div>
             </div>
 
             <div class="body-card--github">
                 <div class="left-card--github">
-                    <h3>weather-app-django</h3>
-                    <p>This is my first app using django 🥳.
-                        You just have to write the city of which you want to know
-                        its climate.</p>
+                    <h3 id="wheaterAppGitHubTitle"></h3>
+                    <p id="wheaterAppGitHubDesc"></p>
                 </div>
                 <div class="right-card--github">
-                    <p>⭐ 0</p>
-                    <p>🍴 0</p>
+                    <p id="wheaterAppGitHubStars"></p>
+                    <p id="wheaterAppGitHubForks"></p>
                 </div>
             </div>
 
             <div class="body-card--github">
                 <div class="left-card--github">
-                    <h3>SCB</h3>
-                    <p>This is my Website, where you can find
-                        everything about me and what I do 👨🏽‍💻</p>
+                    <h3 id="SCBGitHubTitle"></h3>
+                    <p id="SCBGitHubDesc"></p>
                 </div>
                 <div class="right-card--github">
-                    <p>⭐ 0</p>
-                    <p>🍴 0</p>
+                    <p id="SCBGitHubStars"></p>
+                    <p id="SCBGitHubForks"></p>
                 </div>
             </div>
         </div>

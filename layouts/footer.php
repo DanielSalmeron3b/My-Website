@@ -2,14 +2,8 @@
     <section class="horizontal-footer-section footer-top-section">
         <div role="menubar">
             <ul class="footer-top-menu" role="menu">
-                <li class="footer-top-menu-item" role="menuitem">
-                    <a href="#" class="footer-top-menu-link">IT Services</a>
-                </li>
                 <li class="footer-top-menu-item footer-top-menu-item-active" role="menuitem">
                     <a href="#" class="footer-top-menu-link">Web development</a>
-                </li>
-                <li class="footer-top-menu-item" role="menuitem">
-                    <a href="#" class="footer-top-menu-link">SEO</a>
                 </li>
                 <li class="footer-top-menu-item" role="menuitem">
                     <a href="#" class="footer-top-menu-link">UI/UX</a>
@@ -43,6 +37,6 @@
 
 </footer>
 
-
+<script src="JS/main.js"></script>
 </body>
 </html>
