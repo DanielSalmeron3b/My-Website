@@ -1,11 +1,13 @@
 const GITHUB_API_URL = "https://api.github.com/repos",
-    REQUEST_API_TOKEN = "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",
+    REQUEST_API_TOKEN = "ghp_",
         navBorgarButton = document.getElementById("hamburguer-menu"),
-        menu = document.getElementById("hamburguer-nav");
+        menu = document.getElementById("hamburguer-nav"),
+        githubCard1 = document.getElementById("githubCard1"),
+        githubCard2 = document.getElementById("githubCard2"),
+        githubCard3 = document.getElementById("githubCard3");
 
 
 navBorgarButton.addEventListener('click', ()=> {
-
     // Alternate styles for the menu
     menu.classList.toggle("active-menu");
     document.body.classList.toggle("opacity-menu");
@@ -105,6 +107,6 @@ async function loadSCBData() {
 };
 
 
-// loadMyWebsiteData();
-// loadWeatherAppData();
-// loadSCBData();
+loadMyWebsiteData();
+loadWeatherAppData();
+loadSCBData();

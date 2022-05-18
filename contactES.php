@@ -39,10 +39,23 @@ if (isset($_POST["form"])) {
 
 <?php require('./layouts/header.php') ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Contactame</title>
+</head>
+
+<body>
+
     <?php if ($status == "danger") : ?>
 
         <div class="alert danger">
-            <span>There was an error 😓</span>
+            <span>Hubo un error 😓</span>
         </div>
 
     <?php endif; ?>
@@ -50,7 +63,7 @@ if (isset($_POST["form"])) {
     <?php if ($status == "success") : ?>
 
         <div class="alert success">
-            <span>¡Message sent succesfully 🥳!</span>
+            <span>¡Mensaje enviado con éxito 🥳!</span>
         </div>
 
     <?php endif; ?>
@@ -60,31 +73,31 @@ if (isset($_POST["form"])) {
     <form action="./" method="POST" class="window">
 
         <div class="window-body--content window-form">
-            <h1>¡Contact me!</h1>
+            <h1>¡Contactame!</h1>
 
             <div class="input-group">
-                <label for="name">Name:</label>
+                <label for="name">Nombre:</label>
                 <input type="text" name="name" id="name">
             </div>
 
             <div class="input-group">
-                <label for="email">E-mail:</label>
+                <label for="email">Correo:</label>
                 <input type="email" name="email" id="email">
             </div>
 
             <div class="input-group">
-                <label for="subject">Subject:</label>
+                <label for="subject">Asunto:</label>
                 <input type="subject" name="subject" id="subject">
             </div>
 
             <div class="input-group">
-                <label for="message">Message:</label>
+                <label for="message">Mensaje:</label>
                 <textarea name="message" id="message">
             </textarea>
             </div>
 
             <div class="button-container-form">
-                <button name="form" type="submit">Send</button>
+                <button name="form" type="submit">Enviar</button>
             </div>
 
             <div class="contact-info">
@@ -106,4 +119,8 @@ if (isset($_POST["form"])) {
 
     <script src="https://kit.fontawesome.com/bbff992efd.js" crossorigin="anonymous"></script>
 
-<?php require('./layouts/footer.php') ?>
+</body>
+
+</html>
+
+<?php require('./layouts/footerES.php') ?>

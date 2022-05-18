@@ -3,15 +3,15 @@
         <div role="menubar">
             <ul class="footer-top-menu" role="menu">
                 <li class="footer-top-menu-item footer-top-menu-item-active" role="menuitem">
-                    <a href="./projects.php" class="footer-top-menu-link">Projects</a>
+                    <a href="./projectsES.php" class="footer-top-menu-link">Proyectos</a>
                 </li>
                 <li class="footer-top-menu-item" role="menuitem">
-                    <a href="./contact.php" class="footer-top-menu-link">Contact</a>
+                    <a href="./contactES.php" class="footer-top-menu-link">Contacto</a>
                 </li>
             </ul>
         </div>
         <div class="footer-buttons-container">
-            <a href="./projects.php" class="footer-button" role="button">View Projects</a>
+            <a href="./projectsES.php" class="footer-button" role="button">Ver proyectos</a>
         </div>
     </section>
     

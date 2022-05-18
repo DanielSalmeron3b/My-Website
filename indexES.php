@@ -12,13 +12,15 @@
         </div>
         <hr>
         <div class="window-body--content">
-            <h2>Hi I'm Salmerón 👋, a web developer</h2>
+            <h2>Hola soy Salmerón 👋, un desarrollador web</h2>
             <img src="./assets/img/dogwifhat.jpg" class="main-photo" alt="Photo of myself">
-            <p>I'm a self-taught programmer and my dream is to impact people's lives
-                for the better through my code 🌐.
-                </br>
-                My main programming languages are JavaScript and Python.
-                But I'm trying other languages 😄.</p>
+            <p>Soy un programador autodidacta
+                y mi sueño es impactar la vida de las personas para mejor
+                a través de mi código 🌐.
+                <br>
+                Mis principales lenguajes de programación son JavaScript y Python.
+                Pero estoy probando otros lenguajes 😄.
+            </p>
         </div>
     </section>
 
@@ -26,7 +28,7 @@
 
 <article class="window window--body">
     <div class="window-body--header">
-        <h2>Technologies</h2>
+        <h2>Tecnologías</h2>
         <?php require('./layouts/window-icons.php') ?>
     </div>
     <hr>
@@ -93,13 +95,13 @@
 
 <article class="window window--body">
     <div class="window-body--header">
-        <h2>Github projects</h2>
+        <h2>Proyectos en GitHub</h2>
         <?php require('./layouts/window-icons.php') ?>
     </div>
     <hr>
     <div class="third-window--body window-body--content">
         <div class="window-body--cards">
-            <div class="body-card--github" onclick="window.open('https://github.com/DanielSalmeron3b/My-Website/tree/My-Site-PHP', '_blank').focus();">
+            <div class="body-card--github">
                 <div class="left-card--github">
                     <h3 id="myWebsiteGitHubTitle"></h3>
                     <p id="myWebsiteGitHubDesc"></p>
@@ -110,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="body-card--github" onclick="window.open('https://github.com/DanielSalmeron3b/weather-app-django', '_blank').focus();">
+            <div class="body-card--github">
                 <div class="left-card--github">
                     <h3 id="wheaterAppGitHubTitle"></h3>
                     <p id="wheaterAppGitHubDesc"></p>
@@ -121,7 +123,7 @@
                 </div>
             </div>
 
-            <div class="body-card--github" onclick="window.open('https://github.com/Crea-J2021/salesianoscoffeebreak', '_blank').focus();">
+            <div class="body-card--github">
                 <div class="left-card--github">
                     <h3 id="SCBGitHubTitle"></h3>
                     <p id="SCBGitHubDesc"></p>
@@ -136,4 +138,4 @@
 </article>
 
 
-<?php require('./layouts/footer.php') ?>
+<?php require('./layouts/footerES.php') ?>

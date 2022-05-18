@@ -21,25 +21,63 @@
     </div>
 
     <header>
-        <section class="active-menu" id="hamburguer-nav">
 
-            <ul>
-                <li>
-                    <a href="contact.php">CONTACT</a>
-                </li>
-                <li>
-                    <a href="projects.php">PROJECTS</a>
-                </li>
-            </ul>
-
-        </section>
+        <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/indexES.php" || $_SERVER["REQUEST_URI"] == "/My-Website/contactES.php" || $_SERVER["REQUEST_URI"] == "/My-Website/projectsES.php") : ?>
+            <section class="active-menu" id="hamburguer-nav">
+                <ul>
+                    <li>
+                        <a href="indexES.php">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="contactES.php">CONTACTAME</a>
+                    </li>
+                    <li>
+                        <a href="projectsES.php">PROYECTOS</a>
+                    </li>
+                </ul>
+            </section>
+        <?php else : ?>
+            <section class="active-menu" id="hamburguer-nav">
+                <ul>
+                    <li>
+                        <a href="index.php">START</a>
+                    </li>
+                    <li>
+                        <a href="contact.php">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="projects.php">PROJECTS</a>
+                    </li>
+                </ul>
+            </section>
+        <?php endif; ?>
 
         <nav class="window window-nav">
-
             <div class="window-nav--language">
-                <a href="#">EN</a>
-                <a href="#">ES</a>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/index.php") : ?>
+                    <a href="./index.php">US</a>
+                    <a href="./indexES.php">ES</a>
+                <?php endif; ?>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/indexES.php") : ?>
+                    <a href="./index.php">US</a>
+                    <a href="./indexES.php">ES</a>
+                <?php endif; ?>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/projects.php") : ?>
+                    <a href="./projects.php">US</a>
+                    <a href="./projectsES.php">ES</a>
+                <?php endif; ?>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/projectsES.php") : ?>
+                    <a href="./projects.php">US</a>
+                    <a href="./projectsES.php">ES</a>
+                <?php endif; ?>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/contact.php") : ?>
+                    <a href="./contact.php">US</a>
+                    <a href="./contactES.php">ES</a>
+                <?php endif; ?>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/contactES.php") : ?>
+                    <a href="./contact.php">US</a>
+                    <a href="./contactES.php">ES</a>
+                <?php endif; ?>
             </div>
-
         </nav>
     </header>

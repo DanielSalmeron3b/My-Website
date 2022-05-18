@@ -201,7 +201,7 @@ hr{
         )
     );
     gap: 16px;
-    margin-top: 10%;
+    margin-top: 44px;
 }
 .projects-container .window{
     width: 75%;
@@ -221,18 +221,19 @@ hr{
 .project-window--body .window-body--content p{
     font-size: 1.5rem;
 }
-
-button{
+.project-window--body a, form button{
     background: transparent;
     border: 2px solid var(--off-black);
     border-radius: 25px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: 0.1rem;
-}
-.project-window--body button, .button-container-form button{
+    text-decoration: none;
+    color: var(--off-black);
     padding: 6px 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-.project-window--body button:hover, .button-container-form button:hover{
+.project-window--body a:hover, .button-container-form button:hover{
     border: 2px solid var(--grey-text);
     background: var(--off-black);
     color: var(--off-white);
@@ -245,6 +246,7 @@ button{
     background: var(--off-black);
     border-radius: 4px;
     padding: 8px;
+    cursor: pointer;
 }
 .left-card--github p{
     color: var(--grey-text);
