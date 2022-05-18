@@ -38,7 +38,7 @@
 
         <h2>Backend</h2>
 
-        <div class="second-window--backend">
+        <div class="second-window--backend second-window--tech">
             <div class="window-backend--django">
                 <h3>Django 🤠</h3>
                 <img src="./assets/img/django-mint-logo.png" alt="Django">
@@ -51,7 +51,7 @@
 
         <h2>Frontend</h2>
 
-        <div class="second-window--frontend">
+        <div class="second-window--frontend second-window--tech">
             <div class="window-frontend--js">
                 <h3>JavaScript 🌐</h3>
                 <img src="./assets/img/js-pink-logo.png" alt="JavaScript">
@@ -64,14 +64,31 @@
 
         <h2>CMS</h2>
 
-        <div class="second-window--cms">
+        <div class="second-window--cms second-window--tech">
             <div class="window-cms--wordpress">
                 <h3>WordPress 📝</h3>
-                <img src="./assets/img/WordPress-pint-logo.png" alt="WordPress">
+                <img src="./assets/img/WordPress-purple-logo.png" alt="WordPress">
             </div>
-            <div class="window-cms--wordpress">
+            <!-- <div class="window-cms--wordpress">
                 <h3>WordPress 📝</h3>
                 <img src="./assets/img/WordPress-pint-logo.png" alt="WordPress">
+            </div> -->
+        </div>
+
+        <h2>Commits</h2>
+
+        <div class="second-window--commits second-window--tech">
+            <div class="window-commits--git">
+                <h3>Git 🖇️</h3>
+                <img src="./assets/img/git-pink-logo.png" alt="">
+            </div>
+            <div class="window-commits--github">
+                <h3>Github 🐱‍💻</h3>
+                <img src="./assets/img/github-mint-logo.png" alt="">
+            </div>
+            <div class="window-commits--gitlab">
+                <h3>GitLab 🦊</h3>
+                <img src="./assets/img/gitlab-purple-logo.png" alt="">
             </div>
         </div>
 

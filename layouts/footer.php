@@ -3,10 +3,10 @@
         <div role="menubar">
             <ul class="footer-top-menu" role="menu">
                 <li class="footer-top-menu-item footer-top-menu-item-active" role="menuitem">
-                    <a href="#" class="footer-top-menu-link">Web development</a>
+                    <a href="./projects.php" class="footer-top-menu-link">Projects</a>
                 </li>
                 <li class="footer-top-menu-item" role="menuitem">
-                    <a href="#" class="footer-top-menu-link">UI/UX</a>
+                    <a href="./contact.php" class="footer-top-menu-link">Contact</a>
                 </li>
             </ul>
         </div>

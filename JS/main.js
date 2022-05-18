@@ -1,4 +1,5 @@
-const GITHUB_API_URL = "https://api.github.com/repos";
+const GITHUB_API_URL = "https://api.github.com/repos",
+    REQUEST_API_TOKEN = "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",
         navBorgarButton = document.getElementById("hamburguer-menu"),
         menu = document.getElementById("hamburguer-nav");
 
@@ -8,11 +9,16 @@ navBorgarButton.addEventListener('click', ()=> {
     // Alternate styles for the menu
     menu.classList.toggle("active-menu");
     document.body.classList.toggle("opacity-menu");
-}, true);
+});
 
 
 async function loadMyWebsiteData() {
-    const res = await fetch(`${GITHUB_API_URL}/DanielSalmeron3b/My-Website`);
+    const res = await fetch(`${GITHUB_API_URL}/DanielSalmeron3b/My-Website`,{
+        headers: {
+            'Authorization': `token ${REQUEST_API_TOKEN}`
+        },
+    });
+
     const myWebsiteRepoData = await res.json();
     
     console.log("My-Website data loaded");
@@ -38,7 +44,12 @@ async function loadMyWebsiteData() {
 
 
 async function loadWeatherAppData() {
-    const res = await fetch(`${GITHUB_API_URL}/DanielSalmeron3b/weather-app-django`);
+    const res = await fetch(`${GITHUB_API_URL}/DanielSalmeron3b/weather-app-django`,{
+        headers: {
+            'Authorization': `token ${REQUEST_API_TOKEN}`
+        },
+    });
+
     const weatherAppRepoData = await res.json();
     
     console.log("weather-app-django data loaded");
@@ -64,7 +75,12 @@ async function loadWeatherAppData() {
 
 
 async function loadSCBData() {
-    const res = await fetch(`${GITHUB_API_URL}/Crea-J2021/salesianoscoffeebreak`);
+    const res = await fetch(`${GITHUB_API_URL}/Crea-J2021/salesianoscoffeebreak`,{
+        headers: {
+            'Authorization': `token ${REQUEST_API_TOKEN}`
+        },
+    });
+
     const SCBRepoData = await res.json();
     
     console.log("SCB data loaded");
@@ -89,6 +105,6 @@ async function loadSCBData() {
 };
 
 
-loadMyWebsiteData();
-loadWeatherAppData();
-loadSCBData();
+// loadMyWebsiteData();
+// loadWeatherAppData();
+// loadSCBData();

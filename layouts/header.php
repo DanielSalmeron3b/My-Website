@@ -16,30 +16,30 @@
 </head>
 
 <body>
+    <div class="hamburguer-button">
+        <img src="./assets/img/hamburguer-icon-menu.png" alt="Hamburguer icon" id="hamburguer-menu">
+    </div>
 
     <header>
+        <section class="active-menu" id="hamburguer-nav">
+
+            <ul>
+                <li>
+                    <a href="contact.php">CONTACT</a>
+                </li>
+                <li>
+                    <a href="projects.php">PROJECTS</a>
+                </li>
+            </ul>
+
+        </section>
+
         <nav class="window window-nav">
-            <img 
-                src="./assets/img/hamburguer-icon-menu.png" 
-                alt="Hamburguer icon" 
-                id="hamburguer-menu"
-            >
-
-            <div class="active-menu" id="menu">
-
-                <ul>
-                    <li>
-                        <a href="#">CONTACT ME</a>
-                    </li>
-                    <li>
-                        <a href="#">PROJECTS</a>
-                    </li>
-                </ul>
-            </div>
 
             <div class="window-nav--language">
                 <a href="#">EN</a>
                 <a href="#">ES</a>
             </div>
+
         </nav>
     </header>
