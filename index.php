@@ -17,7 +17,7 @@
             <p>I'm a self-taught programmer and my dream is to impact people's lives
                 for the better through my code 🌐.
                 </br>
-                My main programming languages are JavaScript and Python.
+                My main programming languages are JavaScript, PHP and Python.
                 But I'm trying other languages 😄.</p>
         </div>
     </section>

@@ -23,7 +23,7 @@
             <a href="https://github.com/DanielSalmeron3b" target="_blank">
                 <img src="https://img.icons8.com/material-outlined/25/000000/github.png"/>
             </a>
-            <a href="https://www.instagram.com/salmeron.alvarado/" target="_blank">
+            <a href="https://www.instagram.com/salmeron.daniel_/" target="_blank">
                 <img src="https://img.icons8.com/ios-glyphs/25/000000/instagram-new.png"/>
             </a>
             <a href="https://www.linkedin.com/in/salmeron-alvarado/" target="_blank">

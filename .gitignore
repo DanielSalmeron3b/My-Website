@@ -1,1 +1,4 @@
 vendor
+resources/
+resources/email.php
+.vscode/

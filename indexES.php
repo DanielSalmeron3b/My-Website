@@ -18,7 +18,7 @@
                 y mi sueño es impactar la vida de las personas para mejor
                 a través de mi código 🌐.
                 <br>
-                Mis principales lenguajes de programación son JavaScript y Python.
+                Mis principales lenguajes de programación son JavaScript, PHP y Python.
                 Pero estoy probando otros lenguajes 😄.
             </p>
         </div>
