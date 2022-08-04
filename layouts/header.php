@@ -34,6 +34,9 @@
                     <li>
                         <a href="projectsES.php">PROYECTOS</a>
                     </li>
+                    <li>
+                        <a href="ytES.php">YOUTUBE</a>
+                    </li>
                 </ul>
             </section>
         <?php else : ?>
@@ -48,12 +51,16 @@
                     <li>
                         <a href="projects.php">PROJECTS</a>
                     </li>
+                    <li>
+                        <a href="yt.php">YOUTUBE</a>
+                    </li>
                 </ul>
             </section>
         <?php endif; ?>
 
         <nav class="window window-nav">
             <div class="window-nav--language">
+
                 <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/index.php" || $_SERVER["REQUEST_URI"] == "/My-Website/") : ?>
                     <a href="./index.php">US</a>
                     <a href="./indexES.php">ES</a>
@@ -62,6 +69,7 @@
                     <a href="./index.php">US</a>
                     <a href="./indexES.php">ES</a>
                 <?php endif; ?>
+
                 <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/projects.php") : ?>
                     <a href="./projects.php">US</a>
                     <a href="./projectsES.php">ES</a>
@@ -70,6 +78,7 @@
                     <a href="./projects.php">US</a>
                     <a href="./projectsES.php">ES</a>
                 <?php endif; ?>
+
                 <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/contact.php") : ?>
                     <a href="./contact.php">US</a>
                     <a href="./contactES.php">ES</a>
@@ -78,6 +87,16 @@
                     <a href="./contact.php">US</a>
                     <a href="./contactES.php">ES</a>
                 <?php endif; ?>
+
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/yt.php") : ?>
+                    <a href="./yt.php">US</a>
+                    <a href="./ytES.php">ES</a>
+                <?php endif; ?>
+                <?php if ($_SERVER["REQUEST_URI"] == "/My-Website/ytES.php") : ?>
+                    <a href="./yt.php">US</a>
+                    <a href="./ytES.php">ES</a>
+                <?php endif; ?>
+
             </div>
         </nav>
     </header>

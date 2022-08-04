@@ -13,7 +13,7 @@
         <hr>
         <div class="window-body--content">
             <h2>Hi I'm Salmerón 👋, a web developer</h2>
-            <img src="./assets/img/dogwifhat.jpg" class="main-photo" alt="Photo of myself">
+            <img src="./assets/img/me.jpg" class="main-photo" alt="Photo of myself">
             <p>I'm a self-taught programmer and my dream is to impact people's lives
                 for the better through my code 🌐.
                 </br>

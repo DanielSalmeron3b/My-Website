@@ -247,7 +247,8 @@ hr {
     font-size: 1.5rem;
 }
 
-.project-window--body a, form button {
+/* Also button for the YT Page */
+.project-window--body a, form button, .yt-visit-button{
     background: transparent;
     border: 2px solid var(--off-black);
     border-radius: 25px;
@@ -260,7 +261,7 @@ hr {
     cursor: pointer;
 }
 
-.project-window--body a:hover, .button-container-form button:hover {
+.project-window--body a:hover, .button-container-form button:hover, .yt-visit-button:hover {
     border: 2px solid var(--grey-text);
     background: var(--off-black);
     color: var(--off-white);
@@ -402,6 +403,11 @@ hr {
 
 .social a:hover::after {
     clip-path: circle(100%);
+}
+/* YT Page */
+iframe{
+    width: 520px;
+    height: 340px;
 }
 
 /* FOOTER */
